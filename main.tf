@@ -22,4 +22,7 @@ resource "aws_vpc" "my_test_vpc" {
   tags = {
     Name = "main_changed_commit"
   }
+  lifecycle {
+    prevent_destroy = true # Default is false
+  }
 }
